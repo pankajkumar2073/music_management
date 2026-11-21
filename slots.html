@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerformanceSlots | FestManage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav class="navbar">
+        <div class="logo"><span>🎵</span> FestManage</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="artists.html">Artists</a></li>
+            <li><a href="stages.html">Stages</a></li>
+            <li><a href="slots.html" class="active">Slots</a></li>
+            <li><a href="technical.html">Technical</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="conflicts.html">Conflicts</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="page-title">
+            <h1>⏰ Performance Slots</h1>
+        </div>
+
+        <!-- Add Slot Form -->
+        <div class="form-card">
+            <h2>➕ Book Performance Slot</h2>
+            <form id="slot-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Artist *</label>
+                        <select id="slot-artist" class="artist-select" required>
+                            <option value="">Select Artist</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Stage *</label>
+                        <select id="slot-stage" class="stage-select" required>
+                            <option value="">Select Stage</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Date *</label>
+                        <input type="date" id="slot-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Start Time *</label>
+                        <input type="time" id="slot-start" required>
+                    </div>
+                    <div class="form-group">
+                        <label>End Time *</label>
+                        <input type="time" id="slot-end" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Performance Title</label>
+                        <input type="text" id="slot-title" placeholder="e.g. Neon Pulse Live Set">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Book Slot</button>
+            </form>
+        </div>
+
+        <!-- Slots Table -->
+        <h2 style="margin-bottom:1.2rem;color:var(--neon-cyan)">All Performance Slots</h2>
+        <div id="slots-list">
+            <!-- Filled by JS -->
+        </div>
+    </div>
+
+    <footer>
+        <p>Music Festival Artist Management System · CSE326 Project</p>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script src="js/app.js"></script>
+</body>
+</html>

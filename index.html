@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Festival Artist Management System | CSE326 Project</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><span>🎵</span> FestManage</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="artists.html">Artists</a></li>
+            <li><a href="stages.html">Stages</a></li>
+            <li><a href="slots.html">Slots</a></li>
+            <li><a href="technical.html">Technical</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="conflicts.html">Conflicts</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="music-notes">
+            <div class="note">♪</div>
+            <div class="note">♫</div>
+            <div class="note">♩</div>
+            <div class="note">♬</div>
+            <div class="note">♪</div>
+            <div class="note">♫</div>
+        </div>
+
+        <div class="hero-badge">CSE326 · Internet Programming Project</div>
+        <h1>Music Festival<br>Artist Management</h1>
+        <p>
+            A smart, colorful platform for festival organizers to manage artists, 
+            allocate stages, schedule performances, track technical needs, 
+            and detect scheduling conflicts — all in one place.
+        </p>
+        <div class="hero-buttons">
+            <a href="artists.html" class="btn btn-primary">🎤 Manage Artists</a>
+            <a href="schedule.html" class="btn btn-secondary">📅 View Schedule</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Everything You Need</h2>
+            <p>Complete artist & stage management tools for modern music festivals</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">👤</div>
+                <h3>Artist Profiles</h3>
+                <p>Create and manage detailed artist profiles with genre, contact info, bio and confirmation status.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏟️</div>
+                <h3>Stage Allocation</h3>
+                <p>Assign stages with capacity, location and status. Keep every performance on the right platform.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⏰</div>
+                <h3>Performance Slots</h3>
+                <p>Book time slots for artists on specific stages with date, start & end times.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎛️</div>
+                <h3>Technical Requirements</h3>
+                <p>Track equipment, power needs and special notes for each artist’s set.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Full Schedule</h3>
+                <p>Beautiful timeline view of the entire festival lineup sorted by date and time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚠️</div>
+                <h3>Conflict Detection</h3>
+                <p>Automatically detect overlapping performances on the same stage and alert organizers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Preview -->
+    <section class="section" style="padding-top:0">
+        <div class="section-header">
+            <h2>Live System Overview</h2>
+            <p>Current data stored in your browser</p>
+        </div>
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-number" id="stat-artists">0</div>
+                <div class="stat-label">Artists</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-stages">0</div>
+                <div class="stat-label">Stages</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-slots">0</div>
+                <div class="stat-label">Performance Slots</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-conflicts">0</div>
+                <div class="stat-label">Conflicts</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Music Festival Artist Management System · CSE326 Internet Programming Project</p>
+        <p style="margin-top:0.4rem;font-size:0.8rem">Built with HTML, CSS & minimal JavaScript · Data saved in browser localStorage</p>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script src="js/app.js"></script>
+</body>
+</html>

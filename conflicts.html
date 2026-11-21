@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conflict Detection | FestManage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav class="navbar">
+        <div class="logo"><span>🎵</span> FestManage</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="artists.html">Artists</a></li>
+            <li><a href="stages.html">Stages</a></li>
+            <li><a href="slots.html">Slots</a></li>
+            <li><a href="technical.html">Technical</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="conflicts.html" class="active">Conflicts</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="page-title">
+            <h1>⚠️ Conflict Detection</h1>
+        </div>
+
+        <p style="color:var(--text-secondary);margin-bottom:2rem">
+            The system automatically checks for overlapping performances on the same stage at the same time.
+            Conflicts are highlighted below so organizers can resolve them quickly.
+        </p>
+
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-number" id="stat-slots">0</div>
+                <div class="stat-label">Total Slots</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-conflicts">0</div>
+                <div class="stat-label">Conflicts Found</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-stages">0</div>
+                <div class="stat-label">Active Stages</div>
+            </div>
+        </div>
+
+        <!-- Conflicts Area -->
+        <div id="conflicts-area">
+            <!-- Filled by JS -->
+        </div>
+
+        <div class="mt-2" style="text-align:center">
+            <a href="slots.html" class="btn btn-secondary">Go to PerformanceSlots</a>
+            <a href="schedule.html" class="btn btn-primary" style="margin-left:0.8rem">View Full Schedule</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Music Festival Artist Management System · CSE326 Project</p>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script src="js/app.js"></script>
+</body>
+</html>

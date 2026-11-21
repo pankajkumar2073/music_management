@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Profiles | FestManage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav class="navbar">
+        <div class="logo"><span>🎵</span> FestManage</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="artists.html" class="active">Artists</a></li>
+            <li><a href="stages.html">Stages</a></li>
+            <li><a href="slots.html">Slots</a></li>
+            <li><a href="technical.html">Technical</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="conflicts.html">Conflicts</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="page-title">
+            <h1>👤 Artist Profiles</h1>
+        </div>
+
+        <!-- Add Artist Form -->
+        <div class="form-card">
+            <h2>➕ Add New Artist</h2>
+            <form id="artist-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Artist / Band Name *</label>
+                        <input type="text" id="artist-name" placeholder="e.g. Neon Pulse" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Genre</label>
+                        <select id="artist-genre">
+                            <option value="EDM">EDM</option>
+                            <option value="Techno">Techno</option>
+                            <option value="House">House</option>
+                            <option value="Dubstep">Dubstep</option>
+                            <option value="Indie Pop">Indie Pop</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Hip-Hop">Hip-Hop</option>
+                            <option value="Pop">Pop</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Email *</label>
+                        <input type="email" id="artist-contact" placeholder="artist@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="artist-status">
+                            <option value="confirmed">Confirmed</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Short Bio</label>
+                    <textarea id="artist-bio" placeholder="A short description of the artist..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Artist</button>
+            </form>
+        </div>
+
+        <!-- Artists List -->
+        <h2 style="margin-bottom:1.2rem;color:var(--neon-cyan)">All Artists</h2>
+        <div class="card-grid" id="artists-list">
+            <!-- Filled by JS -->
+        </div>
+    </div>
+
+    <footer>
+        <p>Music Festival Artist Management System · CSE326 Project</p>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script src="js/app.js"></script>
+</body>
+</html>
